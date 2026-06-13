@@ -237,6 +237,91 @@ nav{
   text-transform:uppercase;
 }
 
+/* ONLINE AUDITION */
+.online-audition-section{
+  background:linear-gradient(135deg,#0A0A0A 0%,#1A1208 100%);
+  padding:72px 24px;
+}
+.oa-inner{
+  max-width:1000px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:center;
+}
+.oa-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(220,38,38,0.15);
+  border:1.5px solid rgba(220,38,38,0.4);
+  color:#F87171;font-size:0.72rem;font-weight:700;
+  letter-spacing:0.15em;text-transform:uppercase;
+  padding:6px 16px;border-radius:50px;margin-bottom:20px;
+}
+.oa-left h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4.5vw,3rem);font-weight:900;
+  color:#FFF;line-height:1.1;margin-bottom:16px;
+}
+.oa-left p{
+  color:rgba(255,248,231,0.65);font-size:0.93rem;
+  line-height:1.75;margin-bottom:24px;max-width:500px;
+}
+.oa-steps{list-style:none;margin-bottom:32px;display:flex;flex-direction:column;gap:12px;}
+.oa-steps li{
+  display:flex;align-items:center;gap:14px;
+  color:rgba(255,248,231,0.8);font-size:0.9rem;font-weight:500;
+}
+.step-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:28px;border-radius:50%;flex-shrink:0;
+  background:var(--gold);color:#0A0A0A;
+  font-size:0.78rem;font-weight:800;
+}
+.oa-btn-wrap{display:flex;gap:14px;flex-wrap:wrap;}
+.oa-form-btn{
+  display:inline-block;
+  background:transparent;color:var(--gold-light);
+  border:2px solid var(--gold);
+  font-weight:700;font-size:0.88rem;
+  letter-spacing:0.06em;text-transform:uppercase;
+  padding:13px 28px;border-radius:6px;text-decoration:none;
+  transition:all 0.2s;
+}
+.oa-form-btn:hover{background:var(--gold);color:#0A0A0A;}
+.oa-wa-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#25D366;color:#FFF;
+  font-weight:700;font-size:0.88rem;
+  letter-spacing:0.04em;text-transform:uppercase;
+  padding:13px 28px;border-radius:6px;text-decoration:none;
+  transition:transform 0.2s,box-shadow 0.2s;
+  box-shadow:0 4px 16px rgba(37,211,102,0.35);
+}
+.oa-wa-btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(37,211,102,0.5);}
+.oa-card{
+  background:rgba(255,255,255,0.04);
+  border:1.5px solid rgba(212,175,55,0.25);
+  border-radius:14px;padding:32px 28px;text-align:center;
+}
+.oa-card-icon{font-size:2.8rem;margin-bottom:12px;}
+.oa-card h4{
+  font-family:'Playfair Display',serif;
+  font-size:1.3rem;color:var(--gold-light);margin-bottom:6px;
+}
+.oa-card>p{color:rgba(255,248,231,0.5);font-size:0.82rem;margin-bottom:0;}
+.oa-divider{border:none;border-top:1px solid rgba(212,175,55,0.15);margin:18px 0;}
+.oa-info-row{
+  display:flex;align-items:center;gap:12px;
+  color:rgba(255,248,231,0.75);font-size:0.85rem;
+  padding:7px 0;text-align:left;
+}
+.oa-number{
+  font-family:'Playfair Display',serif;
+  font-size:1.2rem;color:var(--gold-light);
+  font-weight:700;letter-spacing:0.04em;margin-top:4px;
+}
+@media(max-width:700px){
+  .oa-inner{grid-template-columns:1fr;}
+  .oa-right{display:none;}
+}
+
 /* MOTIVATE SECTION */
 .motivate-bg{
   background:linear-gradient(135deg,var(--gold) 0%,#9A7209 100%);
@@ -528,6 +613,43 @@ footer a{color:var(--gold-light);text-decoration:none;}
   </div>
 </section>
 
+<!-- ONLINE AUDITION SECTION -->
+<div class="online-audition-section">
+  <div class="oa-inner">
+    <div class="oa-left">
+      <div class="oa-badge">🔴 Live Now</div>
+      <h2>Online Auditions<br/>Available!</h2>
+      <p>Can't come in person? No problem. Fill the registration form on this page and send your performance video directly to us on WhatsApp. Our team will review your audition from wherever you are in India.</p>
+      <ul class="oa-steps">
+        <li><span class="step-num">1</span> Fill the registration form below</li>
+        <li><span class="step-num">2</span> Record your performance video</li>
+        <li><span class="step-num">3</span> Send video on WhatsApp with your name &amp; category</li>
+      </ul>
+      <div class="oa-btn-wrap">
+        <a href="#register" class="oa-form-btn">Fill Registration Form ↓</a>
+        <a href="https://wa.me/918400189405?text=Hello%20Shikha%20Musical%20Production%2C%20I%20have%20filled%20the%20registration%20form%20and%20want%20to%20submit%20my%20audition%20video%20for%20Online%20Audition." class="oa-wa-btn" target="_blank">
+          <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Send Video on WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="oa-right">
+      <div class="oa-card">
+        <div class="oa-card-icon">📱</div>
+        <h4>Online Audition</h4>
+        <p>Participate from anywhere in India</p>
+        <div class="oa-divider"></div>
+        <div class="oa-info-row"><span>📋</span> Fill form on this page</div>
+        <div class="oa-info-row"><span>🎬</span> Record your video (1–3 mins)</div>
+        <div class="oa-info-row"><span>💬</span> Send on WhatsApp</div>
+        <div class="oa-info-row"><span>✅</span> We confirm within 24 hrs</div>
+        <div class="oa-divider"></div>
+        <div class="oa-number">+91 84001 89405</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <hr class="divider"/>
 
 <!-- MOTIVATE SECTION -->
@@ -605,7 +727,7 @@ footer a{color:var(--gold-light);text-decoration:none;}
   <div class="form-wrapper">
     <div class="section-label">Join the Contest</div>
     <h2>Audition Registration Form</h2>
-    <p class="sub">Fill in your details carefully. All fields marked * are mandatory. Payment screenshot / UTR is optional but recommended for faster confirmation.</p>
+    <p class="sub">Fill in your details carefully. All fields marked * are mandatory. Payment screenshot and participant photo are required.</p>
 
     <form id="auditForm" autocomplete="off">
       <div class="form-grid">
@@ -657,6 +779,17 @@ footer a{color:var(--gold-light);text-decoration:none;}
           <label>Full Address *</label>
           <textarea id="address" placeholder="House No., Street, City, State, PIN Code" required></textarea>
         </div>
+        <div class="fg full">
+          <label>Your Photo *</label>
+          <label class="file-upload-label" id="photoLabel">
+            <input type="file" id="participantPhoto" accept="image/*"/>
+            🤳 Upload Your Passport-Size Photo <span style="color:var(--rose);font-weight:700;">(required)</span>
+          </label>
+          <div class="file-name" id="photoName"></div>
+          <div id="photoPreviewWrap" style="display:none;margin-top:10px;">
+            <img id="photoPreview" style="width:90px;height:110px;object-fit:cover;border-radius:6px;border:2px solid var(--gold);box-shadow:0 2px 10px rgba(184,134,11,0.2);"/>
+          </div>
+        </div>
       </div>
 
       <!-- PAYMENT -->
@@ -668,7 +801,7 @@ footer a{color:var(--gold-light);text-decoration:none;}
           <p>Scan the QR code and pay ₹500 via PhonePe / GPay / any UPI app. Then upload your screenshot and/or enter the UTR number below.</p>
           <label class="file-upload-label">
             <input type="file" id="payScreenshot" accept="image/*"/>
-            📸 Upload Payment Screenshot <span style="color:var(--gold)">(optional)</span>
+            📸 Upload Payment Screenshot <span style="color:var(--rose);font-weight:700;">(required)</span>
           </label>
           <div class="file-name" id="fileName"></div>
           <div class="fg" style="margin-top:10px;">
@@ -715,6 +848,19 @@ function updateCountdown(){
 }
 updateCountdown(); setInterval(updateCountdown,60000);
 
+document.getElementById('participantPhoto').addEventListener('change',function(){
+  const fn = this.files[0] ? this.files[0].name : '';
+  document.getElementById('photoName').textContent = fn ? '✓ '+fn : '';
+  if(this.files[0]){
+    const reader = new FileReader();
+    reader.onload = e => {
+      document.getElementById('photoPreview').src = e.target.result;
+      document.getElementById('photoPreviewWrap').style.display = 'block';
+    };
+    reader.readAsDataURL(this.files[0]);
+  }
+});
+
 document.getElementById('payScreenshot').addEventListener('change',function(){
   const fn = this.files[0] ? this.files[0].name : '';
   document.getElementById('fileName').textContent = fn ? '✓ '+fn : '';
@@ -729,11 +875,33 @@ document.getElementById('auditForm').addEventListener('submit',async function(e)
   btn.disabled=true; btn.textContent='Submitting...';
   msg.className=''; msg.style.display='none';
 
+  // Validate required fields
+  const photoFile = document.getElementById('participantPhoto').files[0];
+  if(!photoFile){
+    msg.textContent='⚠️ Please upload your photo before submitting.';
+    msg.className='error';
+    btn.disabled=false; btn.textContent='Submit Registration ✦';
+    return;
+  }
+  const screenshotFile = document.getElementById('payScreenshot').files[0];
+  if(!screenshotFile){
+    msg.textContent='⚠️ Please upload your payment screenshot before submitting.';
+    msg.className='error';
+    btn.disabled=false; btn.textContent='Submit Registration ✦';
+    return;
+  }
+
   let screenshotB64='';
   const file = document.getElementById('payScreenshot').files[0];
   if(file){
     screenshotB64 = await new Promise(res=>{
       const r=new FileReader();r.onload=()=>res(r.result);r.readAsDataURL(file);
+    });
+  }
+  let photoB64='';
+  if(photoFile){
+    photoB64 = await new Promise(res=>{
+      const r=new FileReader();r.onload=()=>res(r.result);r.readAsDataURL(photoFile);
     });
   }
   const payload={
@@ -748,6 +916,7 @@ document.getElementById('auditForm').addEventListener('submit',async function(e)
     address:document.getElementById('address').value.trim(),
     utr:document.getElementById('utr').value.trim(),
     screenshot:screenshotB64,
+    photo:photoB64,
   };
   try{
     const res=await fetch(APPS_SCRIPT_URL,{method:'POST',body:JSON.stringify(payload)});
@@ -758,6 +927,8 @@ document.getElementById('auditForm').addEventListener('submit',async function(e)
       document.getElementById('auditForm').reset();
       document.getElementById('formDate').valueAsDate=new Date();
       document.getElementById('fileName').textContent='';
+      document.getElementById('photoName').textContent='';
+      document.getElementById('photoPreviewWrap').style.display='none';
     } else throw new Error(data.error||'Unknown error');
   } catch(err){
     msg.textContent='⚠️ Submission failed: '+err.message+'. Please try again or contact us on WhatsApp.';
@@ -767,4 +938,4 @@ document.getElementById('auditForm').addEventListener('submit',async function(e)
 });
 </script>
 </body>
-          </html>
+</html>
